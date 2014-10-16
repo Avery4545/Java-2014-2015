@@ -8,6 +8,7 @@ public class CoinFlippingGame {
 		int result = rand.nextInt(2);
 		int heads = 0;
 		int tails = 0;
+		int wallet = 10;
 		System.out
 				.println("Welcome to the coin fucker. How many coins to fuck?");
 		int[] coinArray = new int[scan.nextInt()];
@@ -20,8 +21,15 @@ public class CoinFlippingGame {
 			}
 
 		}
-		//Insert the rules here, like check the amount of heads the user thinks. compare it to heads.
-		//add a wallet (integer), with money in it. 
+	System.out.println("Out of "+coinArray.length+" coins, how many were heads");
+			int userBet = scan.nextInt();
+			
+			//create an if statement saying if the amount of heads the user thinks is equal to the amount
+			//of heads actually, bank increases by bet. otherwise, money is lost.
+			
+			
+			
+			
 		System.out.println("There were " + heads + " heads in a total of "
 				+ coinArray.length + " coins.");
 
