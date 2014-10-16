@@ -20,6 +20,8 @@ public class CoinFlippingGame {
 			}
 
 		}
+		//Insert the rules here, like check the amount of heads the user thinks. compare it to heads.
+		//add a wallet (integer), with money in it. 
 		System.out.println("There were " + heads + " heads in a total of "
 				+ coinArray.length + " coins.");
 
