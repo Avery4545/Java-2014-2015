@@ -5,11 +5,10 @@ import javax.swing.JOptionPane;
 public class CoinFlippingProject {
 	public static void main(String[] args) {
 
-		String name = "";
+		String betType = JOptionPane
+				.showInputDialog("Place a bet! Type heads or tails!");
 
-		name = JOptionPane.showInputDialog("Place a bet! Type heads or tails!");
-
-		JOptionPane.showMessageDialog(null, name + ", Good Luck!");
+		JOptionPane.showMessageDialog(null, "You picked "+betType + ", Good Luck!");
 
 		Random rand = new Random();
 		Scanner scan = new Scanner(System.in);
@@ -17,19 +16,20 @@ public class CoinFlippingProject {
 		int heads = 0;
 		int tails = 0;
 		int bank = 10;
-		int[] coinArray = new int[scan.nextInt()];
-		for (int i = 0; i < coinArray.length; i++) {
-			coinArray[i] = rand.nextInt(2);
-			if (coinArray[i] == 0) {
-				tails++;
-			} else {
-				heads++;
-			}
-			if (name == "heads")
-			{
-				bank++;
-			}
-				
+		int coin = rand.nextInt(2);
+		int parseBet;
+		if (betType.toLowerCase().equals("heads")){
+			parseBet = 1;
 		}
+		else{
+			parseBet = 0;
+		}
+		if (parseBet == 1) {
+		} else {
+			heads++;
+			JOptionPane.showMessageDialog(null, "HEADS!");
+			
+		}
+
 	}
 }
