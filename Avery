@@ -1,16 +1,22 @@
 import java.util.Random;
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
-public class CoinFlippingGame {
+public class CoinFlippingProject {
 	public static void main(String[] args) {
+
+		String name = "";
+
+		name = JOptionPane.showInputDialog("Place a bet! Type heads or tails!");
+
+		JOptionPane.showMessageDialog(null, name + ", Good Luck!");
+
 		Random rand = new Random();
 		Scanner scan = new Scanner(System.in);
 		int result = rand.nextInt(2);
 		int heads = 0;
 		int tails = 0;
-		int wallet = 10;
-		System.out
-				.println("Welcome to the coin fucker. How many coins to fuck?");
+		int bank = 10;
 		int[] coinArray = new int[scan.nextInt()];
 		for (int i = 0; i < coinArray.length; i++) {
 			coinArray[i] = rand.nextInt(2);
@@ -19,19 +25,11 @@ public class CoinFlippingGame {
 			} else {
 				heads++;
 			}
-
+			if (name == "heads")
+			{
+				bank++;
+			}
+				
 		}
-	System.out.println("Out of "+coinArray.length+" coins, how many were heads");
-			int userBet = scan.nextInt();
-			
-			//create an if statement saying if the amount of heads the user thinks is equal to the amount
-			//of heads actually, bank increases by bet. otherwise, money is lost.
-			
-			
-			
-			
-		System.out.println("There were " + heads + " heads in a total of "
-				+ coinArray.length + " coins.");
-
 	}
 }
