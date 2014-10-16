@@ -1,26 +1,27 @@
-public static void main (String[] args){
-
 import java.util.Random;
+import java.util.Scanner;
 
-public class CoinFlippingProject {
+public class CoinFlippingGame {
+	public static void main(String[] args) {
+		Random rand = new Random();
+		Scanner scan = new Scanner(System.in);
+		int result = rand.nextInt(2);
+		int heads = 0;
+		int tails = 0;
+		System.out
+				.println("Welcome to the coin fucker. How many coins to fuck?");
+		int[] coinArray = new int[scan.nextInt()];
+		for (int i = 0; i < coinArray.length; i++) {
+			coinArray[i] = rand.nextInt(2);
+			if (coinArray[i] == 0) {
+				tails++;
+			} else {
+				heads++;
+			}
 
-private enum Coin{Heads, Tails};
+		}
+		System.out.println("There were " + heads + " heads in a total of "
+				+ coinArray.length + " coins.");
 
-Random randomNum = new Random();
-private int result = randomNum.nextInt(2); 
-private int heads = 0;
-private int tails = 1;
-Coin coinFlip;
-
-public void flip(){
-    if(result == 0){
-        coinFlip = Coin.Heads;
-        System.out.println("You flipped Heads!");
-    }else{
-        coinFlip = Coin.Tails;
-        System.out.println("You flipped Tails!");
-    }
-
-
-}
+	}
 }
