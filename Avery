@@ -24,12 +24,8 @@ public class CoinFlippingProject {
 		else{
 			parseBet = 0;
 		}
-		if (parseBet == 1) {
-		} else {
-			heads++;
-			JOptionPane.showMessageDialog(null, "HEADS!");
-			
+		if (coin == parseBet){
+			JOptionPane.showMessageDialog(null, "Congrats");
 		}
-
 	}
 }
