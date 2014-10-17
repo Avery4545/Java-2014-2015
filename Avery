@@ -8,27 +8,50 @@ public class CoinFlippingProject {
 		String betType = JOptionPane
 				.showInputDialog("Place a bet! Type heads or tails!");
 
-		JOptionPane.showMessageDialog(null, "You picked " + betType
-				+ ", Good Luck!");
+		JOptionPane.showMessageDialog(null, "You picked "+betType + ", Good Luck!");
 
 		Random rand = new Random();
 		Scanner scan = new Scanner(System.in);
+		
 		int result = rand.nextInt(2);
 		int heads = 0;
 		int tails = 0;
 		int bank = 10;
-		int coin = rand.nextInt(2);
-		System.out.println(coin);
-		int parseBet = 2;
-		if (betType.toLowerCase().equals("heads")) {
+		int parseBet;
+		
+		if (betType.toLowerCase().equals("heads"))
+		{
 			parseBet = 1;
-		} else if (betType.toLowerCase().equals("tails")) {
+		}
+		
+		else
+		{
 			parseBet = 0;
 		}
-		if (coin == parseBet) {
-			JOptionPane.showMessageDialog(null, "Congrats");
-		} else {
-			System.out.println("The coin wasn't " + betType);
+		if(parseBet !=1 && parseBet !=0)
+		{
+			JOptionPane.showMessageDialog(null, "Error! Type heads or tails!");
+			result = 5;
 		}
-	}
+		if (result != parseBet)
+		{
+			JOptionPane.showMessageDialog(null, "You Loose... :( Try Again");
+			result = 5;
+		}
+		
+		if (result == parseBet)
+		{
+			JOptionPane.showMessageDialog(null, "You Win!");
+			result = 5;
+		}
+		
+		
+		if (result == parseBet)
+		{
+			JOptionPane.showMessageDialog(null, "You Win!");
+			result = 5;
+		}
+		
+			
+}
 }
