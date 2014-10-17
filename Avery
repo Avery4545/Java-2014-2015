@@ -18,6 +18,7 @@ public class CoinFlippingProject {
 		int bank = 10;
 		int coin = rand.nextInt(2);
 		int parseBet;
+		
 		if (betType.toLowerCase().equals("heads")){
 			parseBet = 1;
 		}
@@ -25,7 +26,7 @@ public class CoinFlippingProject {
 			parseBet = 0;
 		}
 		if (coin == parseBet){
-			JOptionPane.showMessageDialog(null, "Congrats");
+			JOptionPane.showMessageDialog(null, "You Win!");
 		}
 	}
 }
