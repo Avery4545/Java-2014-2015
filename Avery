@@ -8,7 +8,8 @@ public class CoinFlippingProject {
 		String betType = JOptionPane
 				.showInputDialog("Place a bet! Type heads or tails!");
 
-		JOptionPane.showMessageDialog(null, "You picked "+betType + ", Good Luck!");
+		JOptionPane.showMessageDialog(null, "You picked " + betType
+				+ ", Good Luck!");
 
 		Random rand = new Random();
 		Scanner scan = new Scanner(System.in);
@@ -17,16 +18,17 @@ public class CoinFlippingProject {
 		int tails = 0;
 		int bank = 10;
 		int coin = rand.nextInt(2);
-		int parseBet;
-		
-		if (betType.toLowerCase().equals("heads")){
+		System.out.println(coin);
+		int parseBet = 2;
+		if (betType.toLowerCase().equals("heads")) {
 			parseBet = 1;
-		}
-		else{
+		} else if (betType.toLowerCase().equals("tails")) {
 			parseBet = 0;
 		}
-		if (coin == parseBet){
-			JOptionPane.showMessageDialog(null, "You Win!");
+		if (coin == parseBet) {
+			JOptionPane.showMessageDialog(null, "Congrats");
+		} else {
+			System.out.println("The coin wasn't " + betType);
 		}
 	}
 }
