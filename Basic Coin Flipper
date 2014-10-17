@@ -1,0 +1,33 @@
+import java.util.Random;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class CoinFlippingProject {
+	public static void main(String[] args) {
+		Random rand = new Random();
+		Scanner scan = new Scanner(System.in);
+		Integer bank = 10;
+		Integer bet = 0;
+		Integer coinValue = 0;
+		String userInput;
+		while (true) {
+			System.out.println("Heads or Tails");
+			userInput = scan.next().toLowerCase();
+			if (userInput.equals("heads") && coinValue == 1) {
+				System.out.println("You win.");
+				coinValue =  null;
+				
+			}
+			if (userInput.equals("tails") && coinValue == 0) {
+				System.out.println("You win.");
+				coinValue =  null;
+				
+			} else {
+				System.out.println("You Lose");
+				coinValue = null;
+			}
+			coinValue = rand.nextInt(2);
+		}
+	}
+}
